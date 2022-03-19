@@ -33,7 +33,7 @@
         android:id="@+id/buttonOfDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="96dp"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -70,11 +70,10 @@
 
     <TextView
         android:id="@+id/viewResult"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="319dp"
+        android:layout_height="123dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:backgroundTint="#000000"
         android:text="Resultado"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -84,7 +83,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.048" />
 
     <EditText
         android:id="@+id/firstNumber"
