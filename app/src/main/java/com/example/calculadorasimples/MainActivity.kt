@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var addition: Button
     private lateinit var multiplication: Button
     private lateinit var division: Button
@@ -30,6 +30,37 @@ class MainActivity : AppCompatActivity() {
         numberOne = findViewById(R.id.firstNumber)
         numberTwo = findViewById(R.id.secondNumber)
 
+        addition.setOnClickListener(this)
+        multiplication.setOnClickListener(this)
+        division.setOnClickListener(this)
+        subtraction.setOnClickListener(this)
 
     }
+
+    override fun onClick(buttonSelection: View?) {
+        when(buttonSelection?.id){
+            R.id.buttonOfSum -> operationSum()
+            R.id.buttonOfSubtraction -> operationSubtraction()
+            R.id.buttonOfMultiplication -> operationMultiplication()
+            R.id.buttonOfDivision -> operationDivison()
+        }
+    }
+
+    private fun operationDivison() {
+        TODO("Not yet implemented")
+    }
+
+    private fun operationMultiplication() {
+        TODO("Not yet implemented")
+    }
+
+    private fun operationSubtraction() {
+        TODO("Not yet implemented")
+    }
+
+    private fun operationSum() {
+        TODO("Not yet implemented")
+    }
+
+
 }
