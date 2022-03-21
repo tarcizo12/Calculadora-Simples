@@ -12,8 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="44dp"
         android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/buttonOfSubtraction"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondNumber" />
 
@@ -21,36 +23,35 @@
         android:id="@+id/buttonOfSubtraction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="64dp"
         android:text="-"
-        app:layout_constraintBottom_toTopOf="@+id/buttonOfDivision"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/secondNumber"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/secondNumber" />
 
     <Button
         android:id="@+id/buttonOfDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="96dp"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.392"
-        app:layout_constraintStart_toEndOf="@+id/buttonOfMultiplication" />
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toEndOf="@+id/buttonOfMultiplication"
+        app:layout_constraintTop_toBottomOf="@+id/buttonOfSubtraction"
+        app:layout_constraintVertical_bias="0.144" />
 
     <Button
         android:id="@+id/buttonOfMultiplication"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_width="85dp"
+        android:layout_height="44dp"
         android:layout_marginStart="72dp"
         android:layout_marginBottom="48dp"
         android:text="x"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonOfSum"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.234" />
 
     <TextView
         android:id="@+id/textView2"
@@ -89,9 +90,9 @@
         android:id="@+id/firstNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         android:text="Digite o primeiro numero"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,15 +105,15 @@
         android:layout_height="48dp"
         android:layout_marginTop="5dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         android:text="Digite o segundo numero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstNumber"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.062" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

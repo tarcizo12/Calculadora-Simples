@@ -2,6 +2,7 @@ package com.example.calculadorasimples
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -15,11 +16,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var viewResult: TextView
     private lateinit var numberOne: EditText
     private lateinit var numberTwo: EditText
+    var valueNumberOne = 0
+    var valueNumberTwo = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         addition = findViewById(R.id.buttonOfSum)
         multiplication = findViewById(R.id.buttonOfMultiplication)
@@ -30,6 +34,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         numberOne = findViewById(R.id.firstNumber)
         numberTwo = findViewById(R.id.secondNumber)
 
+
         addition.setOnClickListener(this)
         multiplication.setOnClickListener(this)
         division.setOnClickListener(this)
@@ -38,29 +43,32 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(buttonSelection: View?) {
-        when(buttonSelection?.id){
+
+        valueNumberOne = Integer.parseInt(numberOne.text.toString())
+        valueNumberTwo = Integer.parseInt(numberTwo.text.toString())
+
+        val totalValue = when(buttonSelection?.id){
             R.id.buttonOfSum -> operationSum()
             R.id.buttonOfSubtraction -> operationSubtraction()
             R.id.buttonOfMultiplication -> operationMultiplication()
             R.id.buttonOfDivision -> operationDivison()
+            else -> 0
         }
+
+        Log.i("app", "$totalValue")
     }
 
-    private fun operationDivison() {
-        TODO("Not yet implemented")
-    }
+    private fun operationSum() = valueNumberOne + valueNumberTwo
 
-    private fun operationMultiplication() {
-        TODO("Not yet implemented")
-    }
+    private fun operationSubtraction() = valueNumberOne - valueNumberTwo
 
-    private fun operationSubtraction() {
-        TODO("Not yet implemented")
-    }
+    private fun operationMultiplication() = valueNumberOne * valueNumberTwo
 
-    private fun operationSum() {
-        TODO("Not yet implemented")
-    }
+    private fun operationDivison() = valueNumberOne.toDouble()/valueNumberTwo.toDouble()
+      
+        
+
+
 
 
 }
