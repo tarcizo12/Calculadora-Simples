@@ -56,6 +56,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         Log.i("app", "$totalValue")
+        viewResult.text = "$totalValue"
+
+
     }
 
     private fun operationSum() = valueNumberOne + valueNumberTwo
