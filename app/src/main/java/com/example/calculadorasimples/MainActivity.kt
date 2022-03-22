@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var addition: Button
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
         addition = findViewById(R.id.buttonOfSum)
@@ -43,9 +45,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(buttonSelection: View?) {
+        val alertException = AlertDialog.Builder(this)
+        alertException.setTitle("Erro na operação")
+        alertException.setMessage("Digite um número válido")
 
+        try{
         valueNumberOne = Integer.parseInt(numberOne.text.toString())
         valueNumberTwo = Integer.parseInt(numberTwo.text.toString())
+        }catch (e: NumberFormatException){
+
+            Log.i("app", "dado invalido")
+            alertException.show()
+        }
 
         val totalValue = when(buttonSelection?.id){
             R.id.buttonOfSum -> operationSum()
