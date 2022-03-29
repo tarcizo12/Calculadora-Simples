@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="72dp"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondNumber" />
@@ -33,13 +33,16 @@
         android:id="@+id/buttonOfDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="48dp"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/buttonOfMultiplication"
         app:layout_constraintTop_toBottomOf="@+id/buttonOfSubtraction"
-        app:layout_constraintVertical_bias="0.144" />
+        app:layout_constraintVertical_bias="0.102" />
 
     <Button
         android:id="@+id/buttonOfMultiplication"
