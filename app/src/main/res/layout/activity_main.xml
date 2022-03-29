@@ -94,7 +94,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="Digite o primeiro numero"
+        android:hint="Digite o primeiro numero"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewResult" />
@@ -107,7 +107,7 @@
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
-        android:text="Digite o segundo numero"
+        android:hint="Digite o segundo numero"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
