@@ -97,9 +97,11 @@
 
     <EditText
         android:id="@+id/firstNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="Digite o primeiro numero"
         android:inputType="number"
@@ -110,9 +112,11 @@
 
     <EditText
         android:id="@+id/secondNumber"
-        android:layout_width="221dp"
+        android:layout_width="0dp"
         android:layout_height="48dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="80dp"
         android:ems="10"
         android:hint="Digite o segundo numero"
         android:inputType="number"
